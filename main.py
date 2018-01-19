@@ -11,9 +11,11 @@ with open('DataTest.data','r',encoding='utf-8') as f:
 def main():
     while(True):
 
-        command = input('请输入要进行的操作(输入9可以呼出菜单):')
+        command = input('请输入要进行的操作(输入(M/m)可以呼出菜单):')
         if command == '1':
             # 增加
+            with open('DataTest.data','r',encoding='utf-8') as f:
+                list = eval(f.read())
             print('\n')
             name = input('请输入要添加的球员姓名:')
             i = 0
@@ -35,12 +37,16 @@ def main():
 
         elif command == '2':
             # 删除
+            with open('DataTest.data','r',encoding='utf-8') as f:
+                list = eval(f.read())
             print('\n')
             name = input('请输入要删除数据的球员姓名:')
             data.delteData(name)
 
         elif command == '3':
             # 改变
+            with open('DataTest.data','r',encoding='utf-8') as f:
+                list = eval(f.read())
             print('\n')
             name = input('请输入要修改数据的球员姓名:')
             i = 0
@@ -56,23 +62,18 @@ def main():
                     key = input('请输入要修改的数据:')
                     if key == '1':
                         data.changeTeam(name)
-                        break
                     
                     elif key == '2':
                         data.changeNumber(name)
-                        break
 
                     elif key == '3':
                         data.changeSeat(name)
-                        break
 
                     elif key == '4':
                         data.changeHeight(name)
-                        break
 
                     elif key == '5':
                         data.changeAll(name)
-                        break
                     
                     elif key == '0':
                         break
@@ -88,7 +89,7 @@ def main():
             # 查询所有数据
             data.searchAll()
 
-        elif command == '9':
+        elif command == 'M' or command == 'm':
             # 显示菜单
             menu.mainMenu()
 

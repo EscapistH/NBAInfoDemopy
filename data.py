@@ -26,14 +26,11 @@ def delteData(name):
                 print('删除成功!\n')
                 with open('DataTest.data','w',encoding='utf-8') as f:
                     f.write(str(list))
-                break
             else:
                 print('用户取消!\n')
-                break
         else:
             if i == (length-1):
                 print('未查询到'+name+'的数据,操作失败.\n')
-                break
         i += 1
 
 def changeTeam(name):
@@ -45,7 +42,6 @@ def changeTeam(name):
             with open('DataTest.data','w',encoding='utf-8') as f:
                 f.write(str(list))
             print('修改成功!\n')
-            break
         i += 1
 
 def changeNumber(name):
@@ -57,7 +53,6 @@ def changeNumber(name):
             with open('DataTest.data','w',encoding='utf-8') as f:
                 f.write(str(list))
             print('修改成功!\n')
-            break
         i += 1
 
 def changeSeat(name):
@@ -69,7 +64,6 @@ def changeSeat(name):
             with open('DataTest.data','w',encoding='utf-8') as f:
                 f.write(str(list))
             print('修改成功!\n')
-            break
         i += 1
 
 def changeHeight(name):
@@ -81,7 +75,6 @@ def changeHeight(name):
             with open('DataTest.data','w',encoding='utf-8') as f:
                 f.write(str(list))
             print('修改成功!\n')
-            break
         i += 1
 
 def changeAll(name):
@@ -96,7 +89,6 @@ def changeAll(name):
             with open('DataTest.data','w',encoding='utf-8') as f:
                 f.write(str(list))
             print('修改成功!\n')
-            break
         i += 1
 
 def searchData(name):
@@ -117,11 +109,10 @@ def searchData(name):
             print('+------------+--------------------+\n')
             with open('DataTest.data','r',encoding='utf-8') as f:
                 f.read()
-            break
+                break
         else:
             if i == (length-1):
                 print('未查询到'+name+'的数据.\n')
-                break
         i += 1
 
 def searchAll():
